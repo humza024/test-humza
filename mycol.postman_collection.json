@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "2783ce82-7317-48af-aa7f-2374b9ae8c42",
+		"name": "mycol",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "facebook.com",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Success', function(){\r",
+							"\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"})\r",
+							"\r",
+							"pm.variables.set('myVar');\r",
+							"\r",
+							"pm.test('Success', function(){\r",
+							"\r",
+							"    pm.response.to.have.status(404);\r",
+							"\r",
+							"})\r",
+							"\r",
+							"pm.variables.set('myVar2');\r",
+							"\r",
+							"pm.test('Success', function(){\r",
+							"\r",
+							"    pm.response.to.have.status(301);\r",
+							"\r",
+							"})\r",
+							"\r",
+							"pm.variables.set('myVar3');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "facebook.com",
+					"host": [
+						"facebook",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
